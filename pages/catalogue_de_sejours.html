@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sport KOH - Catalogue de séjours</title>
+
+    <link rel="stylesheet" href="../assets/main.css">
+    <link rel="icon" type="image/x-icon" href="../assets/ressources/images/logo/favicon.ico">
+</head>
+<body>
+
+    <header>
+        <img alt="Logo de Sport KOH" src="../assets/ressources/images/logo/logo.png">
+		<span id="responsive__nav__button" class="icon burger-menu"></span>
+
+		<nav>
+            <ul>
+                <li>
+                    <a class="active" href="../index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="#">Association</a>
+                </li>
+                <li>
+                    <a href="#">Catalogue de séjours</a>
+                </li>
+                <li>
+                    <span>
+                        Lieux géographiques
+                        <span class="icon arrow-down"></span>
+                    </span>
+
+                    <ul>
+                        <li>
+                            <a href="#">Carte géographique intéractive</a>
+                        </li>
+                        <li>
+                            <a href="#">Au bord de mer</a>
+                        </li>
+                        <li>
+                            <a href="#">À la montagne</a>
+                        </li>
+                        <li>
+                            <a href="#">Au bord d'un lac</a>
+                        </li>
+                        <li>
+                            <a href="#">Lieux historiques</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>
+                        Hébergements
+                        <span class="icon arrow-down"></span>
+                    </span>
+                    <ul>
+                        <li>
+                            <a href="#">Hôtel</a>
+                        </li>
+                        <li>
+                            <a href="#">Auberge</a>
+                        </li>
+                        <li>
+                            <a href="#">Appart City</a>
+                        </li>
+                        <li>
+                            <span>
+                                Camping
+                                <span class="icon arrow-down"></span>
+                            </span>
+                            <ul>
+                                <li>
+                                    <a href="#">Châlets</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bungalows</a>
+                                </li>
+                                <li>
+                                    <a href="#">Mobil Home</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>
+                        Activités
+                        <span class="icon arrow-down"></span>
+                    </span>
+                    <ul>
+                        <li>
+                            <a href="#">Sports à la mer</a>
+                        </li>
+                        <li>
+                            <a href="#">Sports à la montagne</a>
+                        </li>
+                        <li>
+                            <a href="#">Sports d'aventure</a>
+                        </li>
+                        <li>
+                            <a href="#">Activité découverte</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="contact">
+                    <a href="#nous-contacter">Nous contacter</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <main id="catalogue_de_sejours">
+        <div class="container">
+            <div class="filtre">
+                <section>
+                    <h2>Séjours</h2>
+                    <h3>
+                        <span id="offers-found">6</span>
+                        séjours trouvés
+                    </h3>
+                    <span id="filter-button" class="icon filter"></span>
+
+                    <ul class="box">
+                        <h4>Activités <span class = "icon arrow-down"></span></h4>
+
+                        <li data-type="Sports à la montagne">
+                            <input id="a_1" type="checkbox" />
+                            <label for="a_1">Sports à la montagne (4)</label>
+
+                        </li>
+                        <li
+                        data-type="Sports à la mer">
+                             <input id="a_2" type="checkbox" />
+                            <label for="a_2">Sports à la mer (0)</label>
+                        </li>
+                        <li
+                        data-type="Sports d'aventure">
+                            <input id="a_3" type="checkbox" />
+                            <label for="a_3">Sports d'aventure (6)</label>
+                        </li>
+                        <li
+                        data-type="Activité découverte">
+                            <input id="a_4" type="checkbox" />
+                            <label for="a_4">Activité découverte (10)</label>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <h4>Hébergement <span class = "icon arrow-down"></span></h4>
+                        <li
+                        data-type="Hôtels">
+                            <input id="a_5" type="checkbox" />
+                            <label for="a_5">Hôtels (10)</label>
+                        </li>
+                        <li
+                        data-type="Auberge">
+                            <input id="a_6" type="checkbox" />
+                            <label for="a_6">Auberge (15)</label>
+                        </li>
+                        <li
+                        data-type="Appart City">
+                            <input id="a_7" type="checkbox" />
+                            <label for="a_7">Appart City (1)</label>
+                        </li>
+                        <li class="camping"> Camping<span class = "icon arrow-down"></span></li>
+                        <ul class="box">
+                            <li
+                            data-type="Châlets">
+                                <input id="a_8" type="checkbox" />
+                                <label for="a_8">Châlets (5)</label>
+                            </li>
+                            <li
+                            data-type="Bungalows">
+                                <input id="a_9" type="checkbox" />
+                                <label for="a_9">Bungalows (6)</label>
+                            </li>
+                            <li
+                            data-type="Mobil Home">
+                                <input id="a_10" type="checkbox" />
+                                <label for="a_10">Mobil Home (10)</label>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul class="box">
+                        <h4 class = "lg">Lieux géographiques <span class = "icon arrow-down"></span></h4>
+                        <li
+                        data-type="Lieux historiques">
+                            <input id="a_11" type="checkbox" />
+                            <label for="a_11">Lieux historiques (4)</label>
+                        </li>
+                        <li
+                        data-type="A la montagne">
+                            <input id="a_12" type="checkbox" />
+                            <label for="a_12">A la montagne (0)</label>
+                        </li>
+                        <li
+                        data-type="Au bord d'un lac">
+                            <input id="a_13" type="checkbox" />
+                            <label for="a_13">Au bord d'un lac (6)</label>
+                        </li>
+                        <li
+                        data-type="Au bord de la mer">
+                            <input id="a_14" type="checkbox" />
+                            <label for="a_14">Au bord de la mer (10)</label>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="conteneur">
+                <div class="photo">
+                    <figure
+                            data-activites="Sports d'aventure" 
+                            data-locations="Au bord d'un lac" 
+                            data-hebergements="Hôtels, Auberge"
+                            id="f1"
+                    >
+                        <img class = 'rafting'src="../assets/ressources/images/offres/rafting.jpg" alt="Image de Rafting">
+                        <figcaption>
+                            <h2>Rafting en rivière sauvage</h2> 
+                            <h3><span class=" icon localization"></span>Ardèche</h3> 
+                            <h4>A partir de 600€</h4>
+                        </figcaption>
+                    </figure>
+
+                    <figure
+                            data-activites="Sports à la mer" 
+                            data-locations="A la montagne, Au bord de la mer" 
+                            data-hebergements="Hôtels, Auberge, Appart City"
+                            id="f2"
+                    >
+                        <img class="calanque" src="../assets/ressources/images/offres/calanques.jpg" alt="Image de Calanque">
+                        <figcaption>
+                            <h2>Plongée au coeur des calanques </h2> 
+                            <h3> <span class="icon localization"></span>Corse </h3> 
+                            <h4>A partir de 750€</h4>
+                        </figcaption>
+                    </figure>
+
+                    <figure
+                            data-activites="Activité découverte" 
+                            data-locations="Au bord d'un lac, Lieux historiques" 
+                            data-hebergements="Hôtels, Auberge, Appart City"
+                            id="f3"
+                    >
+                        <img src="../assets/ressources/images/offres/loire.jpg" alt="Image de  péniche">
+                        <figcaption>
+                            <h2>Balade en péniche le long de la Loire </h2> 
+                            <h3> <span class="icon localization"></span>Maine et Loire </h3> 
+                            <h4>A partir de 500€</h4>
+                        </figcaption>
+                    </figure>
+
+                    <figure
+                            data-activites="Sports à la montagne, Sports d'aventure" 
+                            data-locations="A la montagne" 
+                            data-hebergements="Hôtels, Auberge, Châlets, Bungalows, Mobil Home"
+                            id="f4"
+                    >
+                        <img src="../assets/ressources/images/offres/escalade.jpg" alt="Image de  ecalade">
+                        <figcaption>
+                            <h2>Escalade dans le vercor  </h2> 
+                            <h3> <span class="icon localization"></span>Vercor</h3> 
+                            <h4>A partir de 800€</h4>
+                        </figcaption>
+                    </figure>
+
+                    <figure
+                            data-activites="Activité découverte" 
+                            data-locations="A la montagne" 
+                            data-hebergements="Hôtels, Auberge, Appart City"
+                            id="f5"
+                    >
+                        <img src="../assets/ressources/images/offres/ballon.jpg" alt="Image de  mongolefière ">
+                        <figcaption>
+                            <h2>Voyage au milieu des nuages </h2> 
+                            <h3> <span class="icon localization"></span>Corse </h3> 
+                            <h4>A partir de 1000€</h4>
+                        </figcaption>
+                    </figure>
+
+                    <figure
+                            data-activites="Activité découverte, Sports à la montagne" 
+                            data-locations="A la montagne" 
+                            data-hebergements="Hôtels, Auberge, Châlets, Bungalows, Mobil Home"
+                            id="f6"
+                    >
+                        <img src="../assets/ressources/images/offres/montagne.jpg" alt="Image de  randonnée">
+                        <figcaption>
+                            <h2>Randonnée dans les Pyrénées </h2> 
+                            <h3> <span class="icon localization"></span>Pyrénées</h3> 
+                            <h4>A partir de 600€</h4>
+                        </figcaption>
+                    </figure>
+
+                 
+                </div>
+            
+                <div>
+                    <ul class="pagination">
+                        <li class="active"><span>
+                            <span class="icon arrow-left"></span>
+                        </span></li>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li class="active"><span>
+                            <span class="icon arrow-right"></span>
+                        </span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Sport KOH - 2022
+
+        <address>
+            02 48 59 69 20  — contact@sportkoh.fr
+            <a href="https://twitter.com">
+                <span class="icon twitter"></span>
+            </a>
+        </address>
+    </footer>
+
+    <script src="../assets/javascript/tools/Filter.js"></script>
+	<script src="../assets/javascript/main.js"></script>
+    <script type="text/javascript">
+        // initialisation du filtre
+        const filter = new Filter(
+            document.querySelectorAll('.filtre>section .box li:not(.camping)'),
+            document.querySelectorAll('.photo>figure')
+        );
+        filter.init();
+
+        // initialisation du boutton pour montrer/cacher les filtres quand on est en mode portable.
+        const filterButton = document.getElementById('filter-button');
+        filterButton.onclick = () => {
+                const filters = document.querySelectorAll('.filtre>section .box');
+                const toggled = filterButton.classList.toggle('active');
+                Array.from(filters).forEach(filter =>
+                    filter.style.display = !toggled ? "none" : "block"
+                );
+            }
+    </script>
+
+</body>
+</html>
