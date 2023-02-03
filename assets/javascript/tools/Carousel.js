@@ -57,21 +57,6 @@ class Carousel {
         this._actualPage = this._minPage;
         this._update();
     }
-
-    /**
-     * @param {String} controllerName le nom de la classe du controller
-     * @param {Function} callback une fonction
-     * @desc initier les actions possibles sur la carousel en cliquant sur des éléments du DOM
-     */
-    _initController(controllerName, callback) {
-        this._controllers
-            .querySelector(`.${controllerName}`)
-            .onclick = () => {
-            callback()
-            this._update()
-        }
-    }
-
     /**
      * @param {String} className le nom de la classe du controller
      * @param {Function} callback une fonction 

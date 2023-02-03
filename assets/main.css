@@ -233,9 +233,13 @@ header>.burger-menu {
     display: none;
     z-index: 999;
 }
-header>.burger-menu:hover,
-header>.burger-menu.active {
+header>.burger-menu:is(:hover, .active) {
     filter: invert(37%) sepia(36%) saturate(616%) hue-rotate(94deg) brightness(89%) contrast(92%);
+}
+header>.responsive__title {
+    display: none;
+    float: left;
+    margin: 0.7em 5em;
 }
 header>img {
     position: absolute;
@@ -384,6 +388,9 @@ header>nav>ul>li>ul>li>ul {
         top: -4px;
     }
 	header>.burger-menu {
+        display: block;
+    }
+    header>.responsive__title {
         display: block;
     }
 	header>nav>ul li>ul {
@@ -841,14 +848,17 @@ main#catalogue_de_sejours {
     position: relative;
 }
 
-#catalogue_de_sejours .filtre>section>ul span.arrow-down{
+#catalogue_de_sejours .filtre>section>ul span.arrow-down {
     position: absolute;
     right: 10px;
     top: 7px;
 }
+#catalogue_de_sejours .filtre>section>ul span.arrow-down.active {
+    transform: rotate(180deg);
+}
 #catalogue_de_sejours .filtre>section ul {
     list-style: none;
-    display: block !important;
+    display: block;
 }
 #catalogue_de_sejours .filtre>section>ul li{
     margin: 16px 0;
@@ -876,13 +886,16 @@ main#catalogue_de_sejours {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
-#catalogue_de_sejours .photo>figure{
+#catalogue_de_sejours .photo>a {
+    text-decoration: none;
+}
+#catalogue_de_sejours .photo>a>figure{
     font-family:'montserrat-bold', sans-serif;
     margin: 20px 20px;
     cursor: pointer;
 }
 
-#catalogue_de_sejours .photo>figure>img{
+#catalogue_de_sejours .photo>a>figure>img{
     background-size: cover;
     background-position: center;
     background-position-x: 50%;
@@ -892,16 +905,16 @@ main#catalogue_de_sejours {
     border-radius: 10px;
 }
 
-#catalogue_de_sejours .photo>figure>figcaption>*{
+#catalogue_de_sejours .photo>a>figure>figcaption>*{
     font-family: 'montserrat-regular', sans-serif;
     font-weight: normal;
 }
 
-#catalogue_de_sejours .photo>figure>figcaption{
+#catalogue_de_sejours .photo>a>figure>figcaption{
     position: relative;
 }
 
-#catalogue_de_sejours .photo>figure>figcaption>h4{
+#catalogue_de_sejours .photo>a>figure>figcaption>h4{
     font-family: "yeseva-one", sans-serif;
     border: 5px;
     border-style: solid;
@@ -916,18 +929,18 @@ main#catalogue_de_sejours {
     font-size: 0.7em;
 }
 
-#catalogue_de_sejours .photo>figure>figcaption>h2{
+#catalogue_de_sejours .photo>a>figure>figcaption>h2{
     font-size: 1.1em;
     margin-bottom: 3px;
     margin-top: 10px;
     
 }
 
-#catalogue_de_sejours .photo>figure>figcaption>h3{
+#catalogue_de_sejours .photo>a>figure>figcaption>h3{
     font-size: 0.9em;
 }
 
-#catalogue_de_sejours .photo>figure>figcaption .icon.localization {
+#catalogue_de_sejours .photo>a>figure>figcaption .icon.localization {
     margin-right: 10px;
 }
 
@@ -990,9 +1003,11 @@ main#catalogue_de_sejours {
     #catalogue_de_sejours>.container>.filtre ul {
         display: none;
 
-        background-color: var(--grey-level-6);
+        background-color: var(--grey-level-9);
         padding: 1em 2em;
         margin-right: 1em;
+
+        border-radius: 10px;
     }
     #catalogue_de_sejours li.camping {
         margin: 0 80px;
@@ -1192,7 +1207,7 @@ main#catalogue_de_sejours {
 /* BLOC PROGRAMME DETAILLÉ */
 #sejour section#prog_detail{
     text-align: center;
-    margin: 75px 0px 130px 0px;
+    margin: 75px 0 2em 0;
 }
 #sejour section#prog_detail h2{
     margin-bottom: 40px;
@@ -1424,22 +1439,28 @@ main#catalogue_de_sejours {
 }
 #sejour h2#ActSec{
     text-align: center;
-    margin-bottom: 50px;
 }
 #sejour section.ActSec figure{
-    
-    box-shadow: 0px 1px 5px #1f1d1d63;
+
+    box-shadow: 0px 1px 5px #95919129;
     padding: 1em 1em;
     border-radius: var(--radius-size);  
     text-align: center;
     margin: 50px;
 }
+
+#sejour section.ActSec figure img {
+    width: 19em;
+    height: 13em;
+    object-fit: cover;
+}
+
 #sejour section.ActSec figure figcaption{
     margin-top: 0.5em;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "montserrat-regular";
+    font-family: "montserrat-regular", sans-serif;
 }
 #sejour section.ActSec figure figcaption span{
     margin-right: 10px;
@@ -1615,15 +1636,19 @@ main#catalogue_de_sejours {
 #hebergement section#act{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+
+    margin-top: -1em;
+    margin-bottom: 3em;
 }
 #hebergement section#act img{
-    width: 15em;
-    height: 10em;
+    width: 19em;
+    height: 13em;
+    object-fit: cover;
 }
 #hebergement section#act figure{
-    margin: 5em;
-    box-shadow: 0px 1px 5px #1f1d1d63;
+    margin: 1em;
+    box-shadow: 0 1px 5px #95919129;
     padding: 1em 1em;
     border-radius: var(--radius-size);  
     text-align: center;
@@ -1704,9 +1729,6 @@ path{
         width: 20rem;
         height: 12em;
     }
-    .image__selector>div>img {
-        width: 40px;
-    }
     #hebergement div#group>section>article:not(.bulle) p {
         width: 25em;
         text-align: justify;
@@ -1735,6 +1757,7 @@ path{
     }
     .image__selector>div>img {
         width: 40px;
+        height: 2em;
     }
     #hebergement div#group>section>article:not(.bulle) p {
         width: 18em;
