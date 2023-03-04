@@ -1207,7 +1207,7 @@ main#catalogue_de_sejours {
 /* BLOC PROGRAMME DETAILLÉ */
 #sejour section#prog_detail{
     text-align: center;
-    margin: 75px 0 2em 0;
+    margin: 75px 0px 130px 0px;
 }
 #sejour section#prog_detail h2{
     margin-bottom: 40px;
@@ -1426,6 +1426,49 @@ main#catalogue_de_sejours {
     }
 }
 
+@media screen and (max-width: 375px) {
+    
+    #sejour div#Inclu_Exclu{
+        width:310px;
+    }
+
+    #sejour div#Inclu_Exclu li{
+        width: 274px;
+    }
+
+
+    #sejour div#Inclu_Exclu li.grandLi {
+        height: 80px;
+        width: 274px;
+    }
+
+    #sejour div#Inclu_Exclu li.grandLi p {
+        margin-top: revert;
+        width: 210px;
+    }
+
+    #sejour div#Inclu_Exclu li.grandLi span {
+        margin-top: 30px;
+    }
+
+    #sejour section#tempsDeChoisir {
+        margin-left: 10px;
+    }
+
+    #sejour section#tempsDeChoisir div.dateFleche span {
+        font-size: 0.8em;
+        margin: 24px -4px 24px -8px !important;
+    }
+
+    #sejour section#tempsDeChoisir div.dateFleche {
+        width: 240px !important;
+    }
+
+    #sejour section#prog_detail {
+        width: 274px;
+    }
+}
+
 /* BLOC INCLU EXCLU*/
 
 /* BLOC ACTIVITÉ SECONDAIRE */
@@ -1439,28 +1482,22 @@ main#catalogue_de_sejours {
 }
 #sejour h2#ActSec{
     text-align: center;
+    margin-bottom: 50px;
 }
 #sejour section.ActSec figure{
-
-    box-shadow: 0px 1px 5px #95919129;
+    
+    box-shadow: 0px 1px 5px #1f1d1d63;
     padding: 1em 1em;
     border-radius: var(--radius-size);  
     text-align: center;
     margin: 50px;
 }
-
-#sejour section.ActSec figure img {
-    width: 19em;
-    height: 13em;
-    object-fit: cover;
-}
-
 #sejour section.ActSec figure figcaption{
     margin-top: 0.5em;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular";
 }
 #sejour section.ActSec figure figcaption span{
     margin-right: 10px;
