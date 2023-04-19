@@ -382,10 +382,10 @@
 
 
         // montrer/cacher les filtres par catégories
-        const boxes = document.querySelectorAll('.box')
+        const boxes = document.querySelectorAll('.box');
         for(const box of boxes) {
-            const button = box.querySelector('.icon.arrow-down')
-	    button.onclick = () => {
+            const button = box.querySelector('.icon.arrow-down');
+	    button?.onclick = () => {
 		const toggled = button.classList.toggle('active');
 		box.querySelectorAll('li').forEach(item => {
 		    item.style.display = toggled ? "none" : "block"
