@@ -449,14 +449,14 @@
         const boxes = document.querySelectorAll('.box')
         for(const box of boxes) {
             const button = box.querySelector('.icon.arrow-down')
-	    if(!button)
-		 return 
-            button.onclick = () => {
-                const toggled = button.classList.toggle('active');
-                box.querySelectorAll('li').forEach(item => {
-                    item.style.display = toggled ? "none" : "block"
-                })
-            }
+	    if(button) {
+		    button.onclick = () => {
+			const toggled = button.classList.toggle('active');
+			box.querySelectorAll('li').forEach(item => {
+			    item.style.display = toggled ? "none" : "block"
+			})
+		    }
+	    }
         }
     </script>
 
